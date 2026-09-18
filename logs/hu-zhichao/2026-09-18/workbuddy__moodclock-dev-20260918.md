@@ -1,0 +1,3 @@
+﻿# 2026-09-18 工作日志
+- 09:26 整理板卡源码包：T-Display-S3_源码包/（34 文件 877KB）+ 同名 zip（187KB）。结构：README 总览 / 1_主固件_mood_clock_v25 / 2_屏幕基准_lcd_min / 3_openvela移植包 / 4_工具脚本(flash_fast/listen/cold_listen/check_board) / 5_文档(引脚速查)。已排除 build 产物与临时 glyphcheck 文件。
+- 15:40-16:05 用 tencent-docx 插件流水线（full_pipeline，创作-排版-转换三段）生成《T-Display-S3心情时钟技术报告.docx》：tech-blog-expert 创作约2000字六章报告；business-report 模板 + business-modern token 排版 HTML（html-review 脚本本会话无输出，降级为确定性自检全绿）；html-to-docx 转换成功零警告。环境经验：插件 uv venv（~/.venv-html-to-docx）缺 pip，依赖装到托管 default venv 并以 PYTHONPATH 指向插件 scripts 目录即可运行；本会话 Start-Process 与管道调外部进程无输出，须用直接调用加重定向模式。产物：output/20260918_techreport/stage3/。

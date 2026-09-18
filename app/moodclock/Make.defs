@@ -1,0 +1,21 @@
+############################################################################
+#  apps/system/moodclock/Make.defs —— 可选：老式 REGISTER 注册方式
+#
+#  若你的 openVela apps 树里没有 Application.mk（不同版本框架有差异），
+#  把本文件内容合并进 apps/system/Make.defs 风格的注册点，并删掉 Makefile。
+#  注意 LIBM：代码用了 sqrtf/atan2f 等，需链接 libm（NuttX 默认已带）。
+############################################################################
+
+ifeq ($(CONFIG_SYSTEM_MOODCLOCK),y)
+
+CONFIG_SRCS += system/moodclock/moodclock_main.c \
+               system/moodclock/mc_gpio.c \
+               system/moodclock/tds3_st7789.c \
+               system/moodclock/mc_gfx.c \
+               system/moodclock/mc_net.c
+
+# 老式内置应用注册（入口函数 moodclock_main，nsh 命令名 moodclock）
+# $(eval $(call REGISTER,System moodclock, MOODCLOCK, 100, 16384, moodclock_main))
+# ↑ 具体参数顺序以你树里的 REGISTER 宏定义为准（apps/builtin/registry）
+
+endif

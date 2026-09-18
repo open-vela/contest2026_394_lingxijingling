@@ -1,0 +1,32 @@
+#
+#  apps/system/moodclock/Kconfig
+#
+#  接入方法：在 apps/Kconfig（或 openVela 对应的 app 清单 Kconfig）里加一行：
+#      source "system/moodclock/Kconfig"
+#  然后在板级 defconfig 里打开：CONFIG_SYSTEM_MOODCLOCK=y
+#
+
+config SYSTEM_MOODCLOCK
+	bool "MoodClock: T-Display-S3 mood clock (ported from Arduino)"
+	default n
+	---help---
+		Dual-page mood clock for LILYGO T-Display-S3 (ST7789V 170x320,
+		8080 parallel bus). Ported from the Arduino mood_clock firmware:
+		page 1 = clock/date/heart-rate/weather with 4 auto themes,
+		page 2 = mood color + cartoon face (happy/sad/angry/calm),
+		BOOT key switches page, shake sensor switches mood.
+
+if SYSTEM_MOODCLOCK
+
+config SYSTEM_MOODCLOCK_PRIORITY
+	int "MoodClock task priority"
+	default 100
+
+config SYSTEM_MOODCLOCK_STACKSIZE
+	int "MoodClock task stack size"
+	default 16384
+	---help---
+		The UI code uses float math and UTF-8 text rendering;
+		16KB is a safe starting point.
+
+endif
