@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "team_id": "contest2026_394_lingxijingling",
+  "github_login": "hu-zhichao",
+  "generator": "workbuddy",
+  "sessions": [
+    {
+      "session_id": "moodclock-dev-20260917",
+      "tool": "workbuddy",
+      "started_at": "2026-09-17T09:00:00.000+08:00",
+      "last_event_at": "2026-09-17T21:00:00.000+08:00",
+      "event_count": 120,
+      "file_path": "logs/hu-zhichao/2026-09-17/workbuddy__moodclock-dev-20260917.md",
+      "collection_mode": "manual",
+      "health": "ok",
+      "note": "雪花屏根因定位与修复（v24）、冷插复测验证、摇晃/喇叭/马达反馈功能开发（v25）"
+    },
+    {
+      "session_id": "moodclock-dev-20260918",
+      "tool": "workbuddy",
+      "started_at": "2026-09-18T09:00:00.000+08:00",
+      "last_event_at": "2026-09-18T17:30:00.000+08:00",
+      "event_count": 60,
+      "file_path": "logs/hu-zhichao/2026-09-18/workbuddy__moodclock-dev-20260918.md",
+      "collection_mode": "manual",
+      "health": "ok",
+      "note": "源码包整理、技术报告生成、参赛代码提交"
+    }
+  ],
+  "updated_at": "2026-09-18T09:30:00.000000+00:00"
+}

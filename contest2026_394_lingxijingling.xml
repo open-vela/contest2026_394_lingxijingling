@@ -12,5 +12,6 @@
     <linkfile src="app/hello_app" dest="packages/demos/contest2026_394_hello_app"/>
     <linkfile src="quickapp/hello_quickapp" dest="packages/apps/contest2026_394_hello_quickapp"/>
     <linkfile src="board/contest_board" dest="vendor/openvela/boards/contest2026_394_board"/>
+    <linkfile src="app/moodclock" dest="packages/demos/contest2026_394_moodclock"/>
   </project>
 </manifest>
